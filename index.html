@@ -3,50 +3,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
-
-    <style>
-
-    img {
-        display: block;          
-        margin: 0 auto;         
-        width: 300px;           
-        height: auto;  
-        border-radius: 70%;         
-    }
-
-</style>
-
-    <img src="petsfood.png" alt="logotipo">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h2 style="font-size:60px; text-align: center";>Alimentador automático</h2>
+    <title>Alimentador Automático</title>
+
     <style>
+        /* Responsividade */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5ff;
             margin: 0;
             padding: 0;
         }
+
         .container {
             max-width: 600px;
-            margin: 50px auto;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fffcc0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+
+        h1, h2 {
             text-align: center;
             color: #333;
         }
+
+        h2 {
+            font-size: 60px;
+        }
+
         label {
             display: block;
             margin: 10px 0 5px;
             color: #555;
         }
+
         input[type="text"],
         input[type="email"],
         select,
@@ -57,9 +50,11 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         textarea {
             height: 100px;
         }
+
         button {
             width: 100%;
             padding: 10px;
@@ -70,76 +65,95 @@
             font-size: 16px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #45a049;
         }
-        strong{
-            font-style: italic;
 
-
-
-
-
-            
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: auto;
+            border-radius: 70%;
         }
+
+        /* Responsividade para telas pequenas */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 45px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 35px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Duvidas sobre Alimentador Automático</h1>
-    <br><br>
+    <img src="petsfood.png" alt="logotipo">
+    
+    <h2>Alimentador Automático</h2>
 
+    <div class="container">
+        <h1>Dúvidas sobre Alimentador Automático</h1>
 
-    <p><b>O alimentador automático é adequado para todos os tipos de animais?</b>Esse alimentador em especifico é para animais de porte pequenos e Destinadoio de 6mm</p>
+        <p><b>O alimentador automático é adequado para todos os tipos de animais?</b> Esse alimentador em específico é para animais de porte pequeno e destinado a ração de 6mm.</p>
+        <p><b>O alimentador permite programar horários de alimentação específicos?</b> Sim, através do Software será possível o dono controlar o horário.</p>
+        <p><b>O alimentador tem controle remoto ou é acessível via aplicativo?</b> O alimentador será controlado através de um Software remotamente no seu smartphone.</p>
+        <p><b>Ele tem uma opção de alimentação manual?</b> Sim, caso o dono prefira, pode desativar o modo automático e deixá-lo no manual.</p>
+        <p><b>Qual tipo de manutenção é necessária?</b> Exige uma manutenção frequente na limpeza, principalmente nas partes removíveis.</p>
+        <p><b>Ele é silencioso ou pode causar ruídos durante a alimentação?</b> Pode causar alguns ruídos, mas nada que cause desconforto tanto para o pet quanto para o dono.</p>
 
-       <p><b> O alimentador permite programar horários de alimentação específicas?</b>Sim, atraves do Software sera possivel o dono controlar o horario</p>
-       
-       <p><b>O alimentador tem controle remoto ou é acessível via aplicativo?</b>O alimentador será controlado atraves de um Software remotamente no seu smartphone</p>
-        
-       <p><b>Ele tem uma opção de alimentação manual?</b>Sim, caso o dono preferir pode desativar o modo automático e deixa no manual</p>
+        <form action="https://formspree.io/f/mpwqwqky" method="POST">
+            <!-- Alterando a URL para Formspree -->
+            <label for="opiniao">Você acha que isso seria algo útil?</label>
+            <select id="opiniao" name="opiniao" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
 
-       <p><b>Qual tipo de matunenção necessária?</b>Exige uma manutenção frequentemente na limpeza principalmentenas partes removiveis</p>
+            <label for="agua">Você precisa de um alimentador que também dispense água automaticamente?</label>
+            <select id="agua" name="agua" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
 
-       <p><b>Ele é silencioso ou pode causar ruídos durante a alimentação?</b>Podem causar alguns ruídos, mas nada que cause um incomodo ou desconforto tanto para o pet quanto para o dono</p>      
+            <label for="usou">Você já usou alimentadores automáticos antes? Se sim, o que gostou ou não gostou no modelo anterior?</label>
+            <input type="text" id="usou" name="usou" required>
 
-       <label for="opiniao">Você acha que isso seria algo util?</label>
-       <select id="opiniao" name="opiniao" required>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-       </select>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
 
-       <label for="opiniao">Você precisa de um alimentador que também dispense água automaticamente?</label>
-       <select id="opiniao" name="opiniao" required>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-       </select>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-        <form action="/enviar-formulario" method="POST">
-        <label for="Escreva">Você já usou alimentadores automáticos antes? Se sim, o que gostou ou não gostou no modelo anterior?</label>
-        <input type="text" id="Escreva" name="Escreva" required>
+            <label for="animal">Tipo de Animal:</label>
+            <select id="animal" name="animal" required>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+                <option value="outros">Outros</option>
+            </select>
 
+            <label for="preferencias">Deixe aqui sua opinião e o que não faltar no alimentador automático:</label>
+            <textarea id="preferencias" name="preferencias" placeholder="Escreva..." required></textarea>
 
-        <form action="/enviar-formulario" method="POST">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="animal">Tipo de Animal:</label>
-        <select id="animal" name="animal" required>
-            <option value="cachorro">Cachorro</option>
-            <option value="gato">Gato</option>
-            <option value="outros">Outros</option>
-        </select>
-
-        <label for="preferencias">Deixe aqui sua opinião e o que não faltar no alimentador automático:</label>
-        <textarea id="preferencias" name="preferencias" placeholder="Escreva..." required></textarea>
-
-        <button type="submit">Enviar</button>
-    </form>
-</div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
 </body>
 </html>
+
